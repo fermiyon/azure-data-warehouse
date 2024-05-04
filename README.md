@@ -8,7 +8,7 @@ By Selman Karaosmanoglu
 
 # Building an Azure Data Warehouse for Data Analytics
 
-# Overview
+## Overview
 
 Azure Synapse Analytics Data Warehouse Solution
 
@@ -24,7 +24,7 @@ This dataset encompasses anonymized trip data from the Divvy bike sharing progra
 
 
 
-# Star Schema
+## Star Schema
 
 The business outcome: 
 
@@ -40,7 +40,7 @@ Analyze how much money is spent
 
 ![screenshot](resources/star-schema.png)
 
-# Azure Blob Storage
+## Azure Blob Storage
 
 ![screenshot](resources/az-synapse-extract.png)
 
