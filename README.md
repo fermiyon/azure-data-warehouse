@@ -18,7 +18,8 @@ This project aims to create a robust data warehouse using Azure Synapse Analytic
 - Data Import: Import data into Synapse.
 - Transformation: Transform data into the star schema.
 - Analytics Reports: Visualize insights using Synapse Analytics.
-This dataset encompasses anonymized trip data from the Divvy bike sharing program in Chicago
+
+This dataset encompasses anonymized trip data from the Divvy bike sharing program in Chicago.
 
 ![ERD](resources/divvy-erd.png)
 
@@ -26,7 +27,7 @@ This dataset encompasses anonymized trip data from the Divvy bike sharing progra
 
 ## Star Schema
 
-The business outcome: 
+The star schema, designed according to the following business outcome: 
 
 Analyze how much time is spent per ride
 - Based on date and time factors such as day of week and time of day
