@@ -1,55 +1,54 @@
-# README Template
+![Static Badge](https://img.shields.io/badge/python-3.9-blue)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/fermiyon/azure-data-warehouse/main)
 
-Below is a template provided for use when building your README file for students.
+By Selman Karaosmanoglu
 
-# Project Title
+## Date created
+04 May 2024
 
-Project description goes here.
+# Building an Azure Data Warehouse for Data Analytics
 
-## Getting Started
+# Overview
 
-Instructions for how to get a copy of the project running on your local machine.
+Azure Synapse Analytics Data Warehouse Solution
 
-### Dependencies
+This project aims to create a robust data warehouse using Azure Synapse Analytics. Key steps include:
 
-```
-Examples here
-```
+- Star Schema Design: Develop a star schema based on business outcomes.
+- Data Import: Import data into Synapse.
+- Transformation: Transform data into the star schema.
+- Analytics Reports: Visualize insights using Synapse Analytics.
+This dataset encompasses anonymized trip data from the Divvy bike sharing program in Chicago
 
-### Installation
+![ERD](resources/divvy-erd.png)
 
-Step by step explanation of how to get a dev environment running.
 
-List out the steps
 
-```
-Give an example here
-```
+# Star Schema
 
-## Testing
+The business outcome: 
 
-Explain the steps needed to run any automated tests
+Analyze how much time is spent per ride
+- Based on date and time factors such as day of week and time of day
+- Based on which station is the starting and / or ending station
+- Based on age of the rider at time of the ride
+- Based on whether the rider is a member or a casual rider
 
-### Break Down Tests
+Analyze how much money is spent
+- Per month, quarter, year
+- Per member, based on the age of the rider at account start
 
-Explain what each test does and why
+![screenshot](resources/star-schema.png)
 
-```
-Examples here
-```
+# Azure Blob Storage
 
-## Project Instructions
+![screenshot](resources/az-synapse-extract.png)
 
-This section should contain all the student deliverables for this project.
+## Requirements
 
-## Built With
+Language: Python 3.9
 
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
+Libraries: psycopg2
 
-Include all items used to build project.
-
-## License
-
-[License](LICENSE.txt)
+## Credits
+Udacity Data Engineer Nanodegree Program
