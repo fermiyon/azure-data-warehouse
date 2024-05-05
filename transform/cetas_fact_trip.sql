@@ -13,12 +13,12 @@ SELECT st.trip_id,
   st.start_station_id,
   st.end_station_id,
   DATEDIFF(HOUR, st.start_at, st.ended_at) AS duration,
-  (DATEDIFF(year, r.birthday,
-    CONVERT(Datetime, SUBSTRING([started_at], 1, 19),120)) - (
-        CASE WHEN MONTH(r.birthday) > MONTH(CONVERT(Datetime, SUBSTRING([started_at], 1, 19),120))
-        OR MONTH(r.birthday) =
+  (DATEDIFF(year, sr.birthday,
+    CONVERT(Datetime, SUBSTRING(started_at, 1, 19),120)) - (
+        CASE WHEN MONTH(sr.birthday) > MONTH(CONVERT(Datetime, SUBSTRING([started_at], 1, 19),120))
+        OR MONTH(sr.birthday) =
             MONTH(CONVERT(Datetime, SUBSTRING([started_at], 1, 19),120))
-        AND DAY(r.birthday) >
+        AND DAY(sr.birthday) >
             DAY(CONVERT(Datetime, SUBSTRING([started_at], 1, 19),120))
         THEN 1 ELSE 0 END
     )) AS rider_age
