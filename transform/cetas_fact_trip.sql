@@ -13,13 +13,13 @@ SELECT st.trip_id,
   st.start_station_id,
   st.end_station_id,
   DATEDIFF(HOUR, st.start_at, st.ended_at) AS duration,
-  (DATEDIFF(year, sr.birthday,
-    CONVERT(Datetime, SUBSTRING(started_at, 1, 19),120)) - (
-        CASE WHEN MONTH(sr.birthday) > MONTH(CONVERT(Datetime, SUBSTRING([started_at], 1, 19),120))
+  (DATEDIFF(YEAR, sr.birthday,
+    CONVERT(DATETIME, SUBSTRING(started_at, 1, 19),120)) - (
+        CASE WHEN MONTH(sr.birthday) > MONTH(CONVERT(DATETIME, SUBSTRING([started_at], 1, 19),120))
         OR MONTH(sr.birthday) =
-            MONTH(CONVERT(Datetime, SUBSTRING([started_at], 1, 19),120))
+            MONTH(CONVERT(DATETIME, SUBSTRING([started_at], 1, 19),120))
         AND DAY(sr.birthday) >
-            DAY(CONVERT(Datetime, SUBSTRING([started_at], 1, 19),120))
+            DAY(CONVERT(DATETIME, SUBSTRING([started_at], 1, 19),120))
         THEN 1 ELSE 0 END
     )) AS rider_age
 FROM [dbo].[staging_trip] st
